@@ -3,7 +3,7 @@
 #I am using Python 3.8.10 with pyautogui version 0.9.54
 #I am using Gimp version 2.10.38
 
-numberofimages = 7
+numberofimages = 100
 
 
 import pyautogui
@@ -17,7 +17,7 @@ print("10 seconds until program starts...")
 
 time.sleep(10)
 
-print("You can stop the program at any point by typing ctrl + alt + delete")
+print("You can stop the program at any point by pressing ctrl + alt + delete")
 
 x = 0
 while x < numberofimages:
@@ -25,6 +25,7 @@ while x < numberofimages:
 	pyautogui.hotkey('alt', 'i')
 	pyautogui.press('down', 9)
 	pyautogui.press('enter')
+	time.sleep(0.2)
 	#Export to override original image
 	pyautogui.hotkey('alt', 'f')
 	pyautogui.press('w')
