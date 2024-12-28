@@ -1,9 +1,6 @@
-#This script will crop a specified number of images that are opened in a Gimp section to the content and override the original image with this cropped image
-#You must have Python and pyautogui installed for this script to work. Install Python 3.8 (or later) on your PC. You can install pyautogui by typing the command "pip3 install pyautogui"
-#I am using Python 3.8.10 with pyautogui version 0.9.54
-#I am using Gimp version 2.10.38
+#Download: https://github.com/Gimmicking/Gimp-Crop-Images-To-Content-Python-Script
 
-numberofimages = 100
+numberofimages = 5
 
 
 import pyautogui
@@ -25,11 +22,12 @@ while x < numberofimages:
 	pyautogui.hotkey('alt', 'i')
 	pyautogui.press('down', 9)
 	pyautogui.press('enter')
-	time.sleep(0.2)
 	#Export to override original image
+	time.sleep(0.2)
 	pyautogui.hotkey('alt', 'f')
 	pyautogui.press('w')
 	#Move to next image
+	pyautogui.press('enter')
 	pyautogui.hotkey('ctrl', 'pagedown')
 	x += 1
 
