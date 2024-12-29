@@ -1,6 +1,6 @@
 #Download: https://github.com/Gimmicking/Gimp-Crop-Images-To-Content-Python-Script
 
-numberofimages = 5
+numberofimages = 198
 
 
 import pyautogui
@@ -17,17 +17,17 @@ time.sleep(10)
 print("You can stop the program at any point by pressing ctrl + alt + delete")
 
 x = 0
+processingtime = numberofimages/600
 while x < numberofimages:
 	#Crop current image to content
 	pyautogui.hotkey('alt', 'i')
 	pyautogui.press('down', 9)
 	pyautogui.press('enter')
 	#Export to override original image
-	time.sleep(0.2)
+	time.sleep(processingtime)
 	pyautogui.hotkey('alt', 'f')
+	time.sleep(processingtime)
 	pyautogui.press('w')
 	#Move to next image
-	pyautogui.press('enter')
 	pyautogui.hotkey('ctrl', 'pagedown')
 	x += 1
-
